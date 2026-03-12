@@ -1,0 +1,12 @@
+{
+	"max_questions_per_game": 20,
+	"lifelines": {
+		"50/50": 1,
+		"skip_question": 1,
+		"ask_the_chat": 1
+	},
+	"leaderboard_file": "data/leaderboard.csv",
+	"questions_file": "data/questions.json",
+	"shuffle_questions": true,
+	"allow_replay": true
+}

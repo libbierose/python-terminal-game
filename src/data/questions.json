@@ -1,0 +1,9 @@
+[
+	{
+		"question": "Which perk make it so the gen does not make a noise when a skill check is failed?",
+		"hint": "Think Technician!",
+		"answers": ["Sprint Burst", "Dead Hard", "Technician", "Iron Will"],
+		"correct": "Technician",
+		"difficulty": "easy"
+	}
+]
