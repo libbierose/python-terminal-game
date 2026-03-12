@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# VS Code settings
+.vscode/
+
+# Mac/Linux system files
+.DS_Store
+*.swp
+
+# Logs
+*.log
+
+# Python test outputs
+.coverage
+*.pytest_cache/
