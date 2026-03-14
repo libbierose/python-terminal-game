@@ -1,0 +1,204 @@
+{
+	"questions": [
+		{
+			"id": 1,
+			"question": "In Dead by Daylight lore, which sports team did Dwight Fairfield try out for in high school?",
+			"category": "lore",
+			"options": ["Football team", "Baseball team", "Basketball team", "Soccer team", "Lacrosse team"],
+			"correct_answer": "Football team",
+			"difficulty": 2,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Dwight_Fairfield"],
+			"notes": ""
+		},
+		{
+			"id": 2,
+			"question": "At Tier III, the Survivor perk Bond reveals other survivors' auras up to how many metres?",
+			"category": "perk",
+			"options": ["28 metres", "32 metres", "36 metres", "40 metres", "44 metres"],
+			"correct_answer": "36 metres",
+			"difficulty": 1,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Dwight_Fairfield"],
+			"notes": ""
+		},
+		{
+			"id": 3,
+			"question": "The Survivor perk Leader increases several action speeds by a percentage. What is the Tier III percentage increase?",
+			"category": "perk",
+			"options": ["15%", "20%", "25%", "30%", "35%"],
+			"correct_answer": "25%",
+			"difficulty": 2,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Dwight_Fairfield"],
+			"notes": ""
+		},
+		{
+			"id": 4,
+			"question": "What is the maximum total repair speed bonus (Tier III) provided by Prove Thyself at full stacks?",
+			"category": "perk",
+			"options": ["18%", "24%", "30%", "36%", "40%"],
+			"correct_answer": "30%",
+			"difficulty": 2,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Dwight_Fairfield"],
+			"notes": ""
+		},
+		{
+			"id": 5,
+			"question": "Which Survivor perk grants an increasing repair speed buff per nearby survivor, up to 30% at Tier III?",
+			"category": "description-to-perk",
+			"options": ["Leader", "Solo", "Prove Thyself", "We're Gonna Live Forever", "Kindred"],
+			"correct_answer": "Prove Thyself",
+			"difficulty": 2,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Dwight_Fairfield"],
+			"notes": ""
+		},
+		{
+			"id": 6,
+			"question": "At Tier III, how many seconds is the cooldown of the Survivor perk Quick & Quiet?",
+			"category": "perk",
+			"options": ["30 seconds", "25 seconds", "20 seconds", "15 seconds", "10 seconds"],
+			"correct_answer": "20 seconds",
+			"difficulty": 1,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Meg_Thomas"],
+			"notes": ""
+		},
+		{
+			"id": 7,
+			"question": "Starting to run triggers Sprint Burst, which applies the Exhausted status. At Tier III, how long does Exhausted last?",
+			"category": "perk",
+			"options": ["60 seconds", "50 seconds", "40 seconds", "30 seconds", "20 seconds"],
+			"correct_answer": "40 seconds",
+			"difficulty": 1,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Meg_Thomas"],
+			"notes": ""
+		},
+		{
+			"id": 8,
+			"question": "The Survivor perk Adrenaline grants a Haste effect and then causes Exhaustion. What is the Tier III duration of the Exhaustion effect?",
+			"category": "perk",
+			"options": ["60 seconds", "50 seconds", "40 seconds", "30 seconds", "20 seconds"],
+			"correct_answer": "40 seconds",
+			"difficulty": 1,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Adrenaline"],
+			"notes": ""
+		},
+		{
+			"id": 9,
+			"question": "Which Survivor perk instantly heals one health state and grants +50% Haste for 3 seconds when the exit gates are powered?",
+			"category": "description-to-perk",
+			"options": ["Adrenaline", "Head On", "No One Left Behind", "Up the Ante", "Lightweight"],
+			"correct_answer": "Adrenaline",
+			"difficulty": 3,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Adrenaline"],
+			"notes": ""
+		},
+		{
+			"id": 10,
+			"question": "Freddy Krueger is introduced in which Chapter DLC of Dead by Daylight?",
+			"category": "lore",
+			"options": ["Chapter 4: Spark of Madness", "Chapter 5: the Last Breath", "Chapter 6: A Nightmare on Elm Street", "Chapter 7: Darkness Among Us", "Chapter 3: Stranger Things"],
+			"correct_answer": "Chapter 6: A Nightmare on Elm Street",
+			"difficulty": 2,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Freddy_Krueger"],
+			"notes": ""
+		},
+		{
+			"id": 11,
+			"question": "At Tier III, what is the duration that Blood Warden blocks the exit gates after hooking a survivor?",
+			"category": "perk",
+			"options": ["40 seconds", "50 seconds", "60 seconds", "70 seconds", "80 seconds"],
+			"correct_answer": "60 seconds",
+			"difficulty": 2,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Freddy_Krueger"],
+			"notes": ""
+		},
+		{
+			"id": 12,
+			"question": "Fire Up gains tokens each time a generator is completed. What is Fire Up's maximum action speed buff at Tier III?",
+			"category": "perk",
+			"options": ["15%", "17.5%", "20%", "22.5%", "25%"],
+			"correct_answer": "20%",
+			"difficulty": 2,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Freddy_Krueger"],
+			"notes": ""
+		},
+		{
+			"id": 13,
+			"question": "At Tier III, Remember Me increases exit-gate opening time by how many seconds per token (up to max)?",
+			"category": "perk",
+			"options": ["6 seconds", "8 seconds", "10 seconds", "12 seconds", "15 seconds"],
+			"correct_answer": "12 seconds",
+			"difficulty": 2,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Freddy_Krueger"],
+			"notes": ""
+		},
+		{
+			"id": 14,
+			"question": "Which Killer perk reduces all other survivors' exit gate opening speed by 12 seconds per token at Tier III (except the Obsession)?",
+			"category": "description-to-perk",
+			"options": ["Remember Me", "Play with Your Food", "Whispers", "Hex: Thrill of the Hunt", "Off the Record"],
+			"correct_answer": "Remember Me",
+			"difficulty": 3,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Freddy_Krueger"],
+			"notes": ""
+		},
+		{
+			"id": 15,
+			"question": "What is The Nightmare's (Freddy Krueger) base movement speed?",
+			"category": "killer-stat",
+			"options": ["3.85 m/s", "4.0 m/s", "4.6 m/s", "4.8 m/s", "5.0 m/s"],
+			"correct_answer": "4.6 m/s",
+			"difficulty": 1,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Freddy_Krueger"],
+			"notes": ""
+		},
+		{
+			"id": 16,
+			"question": "What is The Nightmare's default Terror Radius in the Trial (without Power active)?",
+			"category": "killer-stat",
+			"options": ["16 metres", "24 metres", "32 metres", "0 metres (no terror radius)", "40 metres"],
+			"correct_answer": "32 metres",
+			"difficulty": 2,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Freddy_Krueger"],
+			"notes": ""
+		},
+		{
+			"id": 17,
+			"question": "What is The Trapper's base movement speed in Dead by Daylight?",
+			"category": "killer-stat",
+			"options": ["3.8 m/s", "4.4 m/s", "4.6 m/s", "5.0 m/s", "4.2 m/s"],
+			"correct_answer": "4.6 m/s",
+			"difficulty": 1,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Evan_MacMillan"],
+			"notes": ""
+		},
+		{
+			"id": 18,
+			"question": "What is The Trapper's default Terror Radius?",
+			"category": "killer-stat",
+			"options": ["16 metres", "24 metres", "32 metres", "0 metres (no terror radius)", "20 metres"],
+			"correct_answer": "32 metres",
+			"difficulty": 1,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Evan_MacMillan"],
+			"notes": ""
+		},
+		{
+			"id": 19,
+			"question": "Which Killer perk increases the carrying Killer's movement speed by 18% at Tier III?",
+			"category": "description-to-perk",
+			"options": ["Aggression", "Agitation", "Barbecue & Chilli", "Overcharge", "Predatory Instinct"],
+			"correct_answer": "Agitation",
+			"difficulty": 2,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Evan_MacMillan"],
+			"notes": ""
+		},
+		{
+			"id": 20,
+			"question": "What is The Ghost Face's base movement speed?",
+			"category": "killer-stat",
+			"options": ["3.85 m/s", "4.4 m/s", "4.6 m/s", "5.0 m/s", "4.8 m/s"],
+			"correct_answer": "4.6 m/s",
+			"difficulty": 1,
+			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Danny_Johnson_alias_Jed_Olsen"],
+			"notes": ""
+		}
+	]
+}
