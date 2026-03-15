@@ -17,3 +17,8 @@ def get_random_question():
       random_question = random.choice(questions)
       return Question(**random_question)
    
+def generate_choices(question):
+    wrong_answers = random.sample([option for option in question.options if option != question.correct_answer], 3)
+    choices = wrong_answers + [question.correct_answer]
+    random.shuffle(choices)
+    return choices

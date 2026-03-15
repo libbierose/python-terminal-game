@@ -1,6 +1,8 @@
 import os
 import sys
 from questions import get_random_question
+from questions import generate_choices
+from score import Score, save_score, leadboard
 from rich.console import Console
 from rich.align import Align
 from rich.text import Text
@@ -43,6 +45,7 @@ You have 3 lifelines that you can use:
 - **Ask the Audience**: This will show you the percentage of people who chose each answer, giving you a hint on which one is correct.  
 - **Phone a Friend**: This will give you a hint along with a random answer (*the hint will be correct 70% of the time*).
 """
+userscore = Score()
 
 # print the ASCII art at the top
 def print_ascii_art():
@@ -78,9 +81,13 @@ def display_question(question, answers, correct_answer):
       console.print(Panel(Markdown(f"## {question}\n\n"), border_style="bright_blue", title="[bold cyan]Question[/bold cyan]"))
 
       answer_string = ""
+      keys = list(answers.keys())
 
-      for key, value in answers.items():
-         answer_string += f"[bold green]{key}.[/bold green] {value}\n"
+      for i, key in enumerate(keys):
+         value = answers[key]
+         answer_string += f"[bold green]{key}.[/bold green] {value}"
+         if i != len(keys) - 1:  # add \n if not the last item
+            answer_string += "\n"
 
       console.print(
          Panel(answer_string, border_style="bright_blue", title="[bold cyan]Answers[/bold cyan]")
@@ -99,7 +106,10 @@ def display_question(question, answers, correct_answer):
       else:
          show_question = False
 
-   if user_answer.upper() == correct_answer:
+   letters = ["A", "B", "C", "D"]
+   letter_map = dict(zip(letters, answers.values()))
+
+   if letter_map[user_answer.upper()] == correct_answer:
       return True
    else:
       return False
@@ -108,6 +118,8 @@ def start_game():
    # initialize the error state variables to keep track of whether there is an error and what the error message is
    has_error = False
    has_message = ""
+
+   userscore.reset()
    
    while True:
       clear_screen()
@@ -120,12 +132,15 @@ def start_game():
       result = True
       while result:
          question = get_random_question()
-         result = display_question(question.question, {chr(65 + i): option for i, option in enumerate(question.options)}, chr(65 + question.options.index(question.correct_answer)))
+         choices = generate_choices(question)
+         result = display_question(question.question, {chr(65 + i): option for i, option in enumerate(choices)}, question.correct_answer)
 
          if result:
-            console.print("[bold green]Correct![/bold green]")
+            userscore.add(1)
+            console.print(f"[bold green]Correct![/bold green] your score is now: [bold cyan]{userscore.get_score()}[/bold cyan]")
          else:
-            console.print("[bold red]Incorrect![/bold red]")
+            console.print(f"[bold red]Incorrect! The correct answer was: {question.correct_answer}[/bold red]\nYour final score is: [bold cyan]{userscore.get_score()}[/bold cyan]")
+            save_score(username, userscore.get_score())
 
          console.input("[bold yellow]Press Enter to continue...[/bold yellow]")
 
