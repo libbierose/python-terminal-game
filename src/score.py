@@ -15,12 +15,20 @@ class Score:
         return self.score
     
 def save_score(name: str, score: int, filename: str = "src\\data\\leaderboard.csv"):
-    os.makedirs(os.path.dirname(filename), exist_ok=True)
-
-    with open(filename, 'w') as file:
-        writer = csv.writer(file)
-        writer.writerow(["Name", "Score"])
-        writer.writerow([name, score])
+   # Make sure the folder exists
+   os.makedirs(os.path.dirname(filename), exist_ok=True)
+    
+   # Check if file exists to know whether to write header
+   file_exists = os.path.exists(filename)
+    
+   # Open in append mode so you don't overwrite previous scores
+   with open(filename, 'a', newline='') as file:
+      writer = csv.writer(file)
+      # Only write header if file is new
+      if not file_exists:
+         writer.writerow(["Name", "Score"])
+      # Write the new score
+      writer.writerow([name, score])
 
 def leadboard(filename: str = "src\\data\\leaderboard.csv"):
    try:
