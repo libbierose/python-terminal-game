@@ -6,9 +6,7 @@
 			"category": "lore",
 			"options": ["Football team", "Baseball team", "Basketball team", "Soccer team", "Lacrosse team"],
 			"correct_answer": "Football team",
-			"difficulty": 2,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Dwight_Fairfield"],
-			"notes": ""
+			"difficulty": 2
 		},
 		{
 			"id": 2,
@@ -16,9 +14,7 @@
 			"category": "perk",
 			"options": ["28 metres", "32 metres", "36 metres", "40 metres", "44 metres"],
 			"correct_answer": "36 metres",
-			"difficulty": 1,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Dwight_Fairfield"],
-			"notes": ""
+			"difficulty": 1
 		},
 		{
 			"id": 3,
@@ -26,9 +22,7 @@
 			"category": "perk",
 			"options": ["15%", "20%", "25%", "30%", "35%"],
 			"correct_answer": "25%",
-			"difficulty": 2,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Dwight_Fairfield"],
-			"notes": ""
+			"difficulty": 2
 		},
 		{
 			"id": 4,
@@ -36,9 +30,7 @@
 			"category": "perk",
 			"options": ["18%", "24%", "30%", "36%", "40%"],
 			"correct_answer": "30%",
-			"difficulty": 2,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Dwight_Fairfield"],
-			"notes": ""
+			"difficulty": 2
 		},
 		{
 			"id": 5,
@@ -46,9 +38,7 @@
 			"category": "description-to-perk",
 			"options": ["Leader", "Solo", "Prove Thyself", "We're Gonna Live Forever", "Kindred"],
 			"correct_answer": "Prove Thyself",
-			"difficulty": 2,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Dwight_Fairfield"],
-			"notes": ""
+			"difficulty": 2
 		},
 		{
 			"id": 6,
@@ -56,9 +46,7 @@
 			"category": "perk",
 			"options": ["30 seconds", "25 seconds", "20 seconds", "15 seconds", "10 seconds"],
 			"correct_answer": "20 seconds",
-			"difficulty": 1,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Meg_Thomas"],
-			"notes": ""
+			"difficulty": 1
 		},
 		{
 			"id": 7,
@@ -66,9 +54,7 @@
 			"category": "perk",
 			"options": ["60 seconds", "50 seconds", "40 seconds", "30 seconds", "20 seconds"],
 			"correct_answer": "40 seconds",
-			"difficulty": 1,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Meg_Thomas"],
-			"notes": ""
+			"difficulty": 1
 		},
 		{
 			"id": 8,
@@ -76,9 +62,7 @@
 			"category": "perk",
 			"options": ["60 seconds", "50 seconds", "40 seconds", "30 seconds", "20 seconds"],
 			"correct_answer": "40 seconds",
-			"difficulty": 1,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Adrenaline"],
-			"notes": ""
+			"difficulty": 1
 		},
 		{
 			"id": 9,
@@ -86,9 +70,7 @@
 			"category": "description-to-perk",
 			"options": ["Adrenaline", "Head On", "No One Left Behind", "Up the Ante", "Lightweight"],
 			"correct_answer": "Adrenaline",
-			"difficulty": 3,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Adrenaline"],
-			"notes": ""
+			"difficulty": 3
 		},
 		{
 			"id": 10,
@@ -96,9 +78,7 @@
 			"category": "lore",
 			"options": ["Chapter 4: Spark of Madness", "Chapter 5: the Last Breath", "Chapter 6: A Nightmare on Elm Street", "Chapter 7: Darkness Among Us", "Chapter 3: Stranger Things"],
 			"correct_answer": "Chapter 6: A Nightmare on Elm Street",
-			"difficulty": 2,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Freddy_Krueger"],
-			"notes": ""
+			"difficulty": 2
 		},
 		{
 			"id": 11,
@@ -106,9 +86,7 @@
 			"category": "perk",
 			"options": ["40 seconds", "50 seconds", "60 seconds", "70 seconds", "80 seconds"],
 			"correct_answer": "60 seconds",
-			"difficulty": 2,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Freddy_Krueger"],
-			"notes": ""
+			"difficulty": 2
 		},
 		{
 			"id": 12,
@@ -116,9 +94,7 @@
 			"category": "perk",
 			"options": ["15%", "17.5%", "20%", "22.5%", "25%"],
 			"correct_answer": "20%",
-			"difficulty": 2,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Freddy_Krueger"],
-			"notes": ""
+			"difficulty": 2
 		},
 		{
 			"id": 13,
@@ -126,9 +102,7 @@
 			"category": "perk",
 			"options": ["6 seconds", "8 seconds", "10 seconds", "12 seconds", "15 seconds"],
 			"correct_answer": "12 seconds",
-			"difficulty": 2,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Freddy_Krueger"],
-			"notes": ""
+			"difficulty": 2
 		},
 		{
 			"id": 14,
@@ -136,9 +110,7 @@
 			"category": "description-to-perk",
 			"options": ["Remember Me", "Play with Your Food", "Whispers", "Hex: Thrill of the Hunt", "Off the Record"],
 			"correct_answer": "Remember Me",
-			"difficulty": 3,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Freddy_Krueger"],
-			"notes": ""
+			"difficulty": 3
 		},
 		{
 			"id": 15,
@@ -146,9 +118,7 @@
 			"category": "killer-stat",
 			"options": ["3.85 m/s", "4.0 m/s", "4.6 m/s", "4.8 m/s", "5.0 m/s"],
 			"correct_answer": "4.6 m/s",
-			"difficulty": 1,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Freddy_Krueger"],
-			"notes": ""
+			"difficulty": 1
 		},
 		{
 			"id": 16,
@@ -156,9 +126,7 @@
 			"category": "killer-stat",
 			"options": ["16 metres", "24 metres", "32 metres", "0 metres (no terror radius)", "40 metres"],
 			"correct_answer": "32 metres",
-			"difficulty": 2,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Freddy_Krueger"],
-			"notes": ""
+			"difficulty": 2
 		},
 		{
 			"id": 17,
@@ -166,9 +134,7 @@
 			"category": "killer-stat",
 			"options": ["3.8 m/s", "4.4 m/s", "4.6 m/s", "5.0 m/s", "4.2 m/s"],
 			"correct_answer": "4.6 m/s",
-			"difficulty": 1,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Evan_MacMillan"],
-			"notes": ""
+			"difficulty": 1
 		},
 		{
 			"id": 18,
@@ -176,9 +142,7 @@
 			"category": "killer-stat",
 			"options": ["16 metres", "24 metres", "32 metres", "0 metres (no terror radius)", "20 metres"],
 			"correct_answer": "32 metres",
-			"difficulty": 1,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Evan_MacMillan"],
-			"notes": ""
+			"difficulty": 1
 		},
 		{
 			"id": 19,
@@ -186,9 +150,7 @@
 			"category": "description-to-perk",
 			"options": ["Aggression", "Agitation", "Barbecue & Chilli", "Overcharge", "Predatory Instinct"],
 			"correct_answer": "Agitation",
-			"difficulty": 2,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Evan_MacMillan"],
-			"notes": ""
+			"difficulty": 2
 		},
 		{
 			"id": 20,
@@ -196,9 +158,7 @@
 			"category": "killer-stat",
 			"options": ["3.85 m/s", "4.4 m/s", "4.6 m/s", "5.0 m/s", "4.8 m/s"],
 			"correct_answer": "4.6 m/s",
-			"difficulty": 1,
-			"source_urls": ["https://deadbydaylight.fandom.com/wiki/Danny_Johnson_alias_Jed_Olsen"],
-			"notes": ""
+			"difficulty": 1
 		}
 	]
 }

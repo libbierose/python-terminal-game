@@ -1,5 +1,6 @@
 import os
 import sys
+from questions import get_random_question
 from rich.console import Console
 from rich.align import Align
 from rich.text import Text
@@ -118,7 +119,8 @@ def start_game():
 
       result = True
       while result:
-         result = display_question("What is the capital of France?", {"A": "Paris", "B": "London", "C": "Rome", "D": "Berlin"}, "A")
+         question = get_random_question()
+         result = display_question(question.question, {chr(65 + i): option for i, option in enumerate(question.options)}, chr(65 + question.options.index(question.correct_answer)))
 
          if result:
             console.print("[bold green]Correct![/bold green]")
