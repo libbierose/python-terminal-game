@@ -56,9 +56,6 @@ def print_welcome_message():
    console.print(Panel(Markdown(welcome_text), border_style="bright_blue", title="[bold cyan]Instructions[/bold cyan]"))
 
 def welocme_screen():
-   clear_screen()
-   
-   print_ascii_art()
    print_welcome_message()
    
    user_name = console.input("[bold yellow]Please enter your name: [/bold yellow]")
@@ -71,6 +68,8 @@ def display_question(question, answers, correct_answer):
    has_error = False
    error_message = ""
    show_question = True
+
+   letters = ["A", "B", "C", "D"]
 
    while show_question:
       clear_screen()
@@ -104,17 +103,21 @@ def display_question(question, answers, correct_answer):
       if user_answer == "":
          has_error = True
          error_message = "Please enter an answer."
+      elif user_answer.upper() not in letters:
+         # if the user enters an invalid option, set the error state and display an error message
+         has_error = True
+         error_message = "Invalid option. Please enter one of the following: " + ", ".join(letters)
+         show_question = True
       else:
          show_question = False
 
-   letters = ["A", "B", "C", "D"]
    letter_map = dict(zip(letters, answers.values()))
-
+   
    if letter_map[user_answer.upper()] == correct_answer:
       return True
    else:
       return False
-
+   
 def start_game(username):
    userscore.reset()
    
@@ -184,8 +187,6 @@ def main_menu(username):
    error_message = ""
    
    while True:
-      clear_screen()
-      print_ascii_art()
       print_welcome_message()
       
       # print the main menu options
