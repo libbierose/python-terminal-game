@@ -1,8 +1,8 @@
 import os
 import sys
-from questions import get_random_question
+from questions import Quiz, load_questions, get_random_question
 from questions import generate_choices
-from score import Score, save_score, leadboard
+from score import Score, save_score, leaderboard
 from rich.console import Console
 from rich.align import Align
 from rich.text import Text
@@ -12,8 +12,6 @@ from rich.markdown import Markdown
 # clear the screen function that works on both Windows and Unix-based systems
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
-
-clear_screen()
 
 console = Console()
 
@@ -51,14 +49,17 @@ userscore = Score()
 def print_ascii_art():
    console.print(Align.center(Text(dbd_ascii_art, style="bold red")))
 
-def welcome_message():
+# print the ASCII art at the top of the welcome message
+def print_welcome_message():
+   clear_screen()
+   print_ascii_art()
+   console.print(Panel(Markdown(welcome_text), border_style="bright_blue", title="[bold cyan]Instructions[/bold cyan]"))
+
+def welocme_screen():
    clear_screen()
    
-   # print the ASCII art at the top of the welcome message
    print_ascii_art()
-   
-   # print the welcome message and instructions
-   console.print(Panel(Markdown(welcome_text), border_style="bright_blue", title="[bold cyan]Instructions[/bold cyan]"))
+   print_welcome_message()
    
    user_name = console.input("[bold yellow]Please enter your name: [/bold yellow]")
    
@@ -68,7 +69,7 @@ def welcome_message():
 def display_question(question, answers, correct_answer):
    # initialize the error state variables to keep track of whether there is an error and what the error message is
    has_error = False
-   has_message = ""
+   error_message = ""
    show_question = True
 
    while show_question:
@@ -95,14 +96,14 @@ def display_question(question, answers, correct_answer):
 
       # if there is an error, display the error message in a red panel at the top of the menu
       if has_error:
-         console.print(Panel(f"[bold red]{has_message}[/bold red]", border_style="red", title="[bold red]Error[/bold red]"))
+         console.print(Panel(f"[bold red]{error_message}[/bold red]", border_style="red", title="[bold red]Error[/bold red]"))
       
       # prompt the user to enter their answer
       user_answer = console.input("[bold yellow]Please enter your answer: [/bold yellow]")
 
       if user_answer == "":
          has_error = True
-         has_message = "Please enter an answer."
+         error_message = "Please enter an answer."
       else:
          show_question = False
 
@@ -114,42 +115,47 @@ def display_question(question, answers, correct_answer):
    else:
       return False
 
-def start_game():
-   # initialize the error state variables to keep track of whether there is an error and what the error message is
-   has_error = False
-   has_message = ""
-
+def start_game(username):
    userscore.reset()
    
    while True:
       clear_screen()
       print_ascii_art()
 
-      # if there is an error, display the error message in a red panel at the top of the menu
-      if has_error:
-         console.print(Panel(f"[bold red]{has_message}[/bold red]", border_style="red", title="[bold red]Error[/bold red]"))
+      quiz = Quiz(load_questions())
+      question_number = 1
 
-      result = True
-      while result:
-         question = get_random_question()
+      keep_playing = True
+
+      while keep_playing:
+         question = quiz.questions[question_number - 1]
          choices = generate_choices(question)
-         result = display_question(question.question, {chr(65 + i): option for i, option in enumerate(choices)}, question.correct_answer)
+         correct = display_question(question.question, {chr(65 + i): option for i, option in enumerate(choices)}, question.correct_answer)
 
-         if result:
+         if correct:
             userscore.add(1)
             console.print(f"[bold green]Correct![/bold green] your score is now: [bold cyan]{userscore.get_score()}[/bold cyan]")
          else:
             console.print(f"[bold red]Incorrect! The correct answer was: {question.correct_answer}[/bold red]\nYour final score is: [bold cyan]{userscore.get_score()}[/bold cyan]")
             save_score(username, userscore.get_score())
+            keep_playing = False
 
          console.input("[bold yellow]Press Enter to continue...[/bold yellow]")
+
+         if question_number >= len(quiz.questions) and correct:
+               console.print(f"[bold green]Congratulations! You've completed the quiz![/bold green]\nYour final score is: [bold cyan]{userscore.get_score()}[/bold cyan]")
+               save_score(username, userscore.get_score())
+               console.input("[bold yellow]Press Enter to return to the main menu...[/bold yellow]")
+               return
+         else:
+            question_number += 1
 
       return
 
 def config_menu():
    # initialize the error state variables to keep track of whether there is an error and what the error message is
    has_error = False
-   has_message = ""
+   error_message = ""
 
    while True:
       clear_screen()
@@ -157,7 +163,7 @@ def config_menu():
       
       # print the configuration menu options
       if has_error:
-         console.print(Panel(f"[bold red]{has_message}[/bold red]", border_style="red", title="[bold red]Error[/bold red]"))
+         console.print(Panel(f"[bold red]{error_message}[/bold red]", border_style="red", title="[bold red]Error[/bold red]"))
       
       # prompt the user to select an option from the configuration menu
       user_input = console.input("[bold yellow]This is just placeholder for now type 'back' to go to the main menu: [/bold yellow]")
@@ -170,26 +176,24 @@ def config_menu():
          case _:
             # if the user enters an invalid option, set the error state and display an error message
             has_error = True
-            has_message = "Invalid option. Please type 'back' to return to the main menu."
+            error_message = "Invalid option. Please type 'back' to return to the main menu."
 
 def main_menu(username):
    # initialize the error state variables to keep track of whether there is an error and what the error message is
    has_error = False
-   has_message = ""
+   error_message = ""
    
    while True:
       clear_screen()
       print_ascii_art()
-      
-      # print the welcome message and instructions
-      console.print(Panel(Markdown(welcome_text), border_style="bright_blue", title="[bold cyan]Instructions[/bold cyan]"))
+      print_welcome_message()
       
       # print the main menu options
       console.print(Panel(f"Hiya {username}! please select one of the options below:\n[bold green]1.[/bold green] Start Game\n[bold green]2.[/bold green] Configuration\n[bold green]3.[/bold green] Exit", border_style="bright_blue", title="[bold cyan]Main Menu[/bold cyan]"))
       
       # if there is an error, display the error message in a red panel at the top of the menu
       if has_error:
-         console.print(Panel(f"[bold red]{has_message}[/bold red]", border_style="red", title="[bold red]Error[/bold red]"))
+         console.print(Panel(f"[bold red]{error_message}[/bold red]", border_style="red", title="[bold red]Error[/bold red]"))
       
       # prompt the user to select an option from the main menu   
       user_input = console.input("[bold yellow]Please select an option (1, 2, or 3): [/bold yellow]")
@@ -200,7 +204,7 @@ def main_menu(username):
             # reset the error state before starting the game
             has_error = False
             # call the start_game function to begin the game
-            start_game()
+            start_game(username)
          case "2":
             # reset the error state before showing the configuration menu
             has_error = False
@@ -215,8 +219,10 @@ def main_menu(username):
          case _:
             # if the user enters an invalid option, set the error state and display an error message
             has_error = True
-            has_message = "Invalid option. Please choose 1, 2, or 3."
+            error_message = "Invalid option. Please choose 1, 2, or 3."
 
-# Start the game by showing the welcome message and then displaying the main menu with the user's name.
-username = welcome_message()
-main_menu(username)
+# This is the entry point of the program. It starts by showing the welcome message and then displays the main menu with the user's name.
+if __name__ == "__main__":
+   # Start the game by showing the welcome message and then displaying the main menu with the user's name.
+   username = welocme_screen()
+   main_menu(username)

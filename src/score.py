@@ -2,17 +2,17 @@ import os
 import csv
 
 class Score:
-    def __init__(self, score: int = 0):
-        self.score = score
+   def __init__(self, score: int = 0):
+      self.score = score
 
-    def add(self, points: int):
-        self.score += points
+   def add(self, points: int):
+      self.score += points
 
-    def reset(self):
-        self.score = 0
+   def reset(self):
+      self.score = 0
 
-    def get_score(self) -> int:
-        return self.score
+   def get_score(self) -> int:
+      return self.score
     
 def save_score(name: str, score: int, filename: str = "src\\data\\leaderboard.csv"):
    # Make sure the folder exists
@@ -30,7 +30,7 @@ def save_score(name: str, score: int, filename: str = "src\\data\\leaderboard.cs
       # Write the new score
       writer.writerow([name, score])
 
-def leadboard(filename: str = "src\\data\\leaderboard.csv"):
+def leaderboard(filename: str = "src\\data\\leaderboard.csv"):
    try:
       with open(filename, 'r') as file:
          scores = {}

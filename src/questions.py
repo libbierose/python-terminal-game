@@ -10,6 +10,34 @@ class Question:
       self.correct_answer = correct_answer
       self.difficulty = difficulty
 
+class Quiz:
+   def __init__(self, questions):
+      self.questions = questions
+      self.current_question_index = 0
+      self.score = 0
+      self.total_questions = len(questions)
+
+   def get_current_question(self):
+      if self.current_question_index < self.total_questions:
+         return self.questions[self.current_question_index]
+      else:
+         return None
+   
+   def increment_score(self):
+      self.score += 1
+
+   def increment_question_index(self):
+      self.current_question_index += 1
+
+def load_questions(amount = 20):
+   with open("src/data/dbd.json", "r") as file:
+      data = json.load(file)
+
+   selected = random.sample(data["questions"], amount)
+   
+   return [Question(**q) for q in selected]
+
+
 def get_random_question():
    with open("src/data/dbd.json", "r") as file:
       data = json.load(file)
@@ -18,7 +46,7 @@ def get_random_question():
       return Question(**random_question)
    
 def generate_choices(question):
-    wrong_answers = random.sample([option for option in question.options if option != question.correct_answer], 3)
-    choices = wrong_answers + [question.correct_answer]
-    random.shuffle(choices)
-    return choices
+   wrong_answers = random.sample([option for option in question.options if option != question.correct_answer], 3)
+   choices = wrong_answers + [question.correct_answer]
+   random.shuffle(choices)
+   return choices
