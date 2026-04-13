@@ -55,7 +55,7 @@ def print_welcome_message():
    print_ascii_art()
    console.print(Panel(Markdown(welcome_text), border_style="bright_blue", title="[bold cyan]Instructions[/bold cyan]"))
 
-def welocme_screen():
+def welcome_screen():
    print_welcome_message()
    
    user_name = console.input("[bold yellow]Please enter your name: [/bold yellow]")
@@ -225,5 +225,5 @@ def main_menu(username):
 # This is the entry point of the program. It starts by showing the welcome message and then displays the main menu with the user's name.
 if __name__ == "__main__":
    # Start the game by showing the welcome message and then displaying the main menu with the user's name.
-   username = welocme_screen()
+   username = welcome_screen()
    main_menu(username)

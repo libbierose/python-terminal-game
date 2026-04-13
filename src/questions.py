@@ -50,3 +50,26 @@ def generate_choices(question):
    choices = wrong_answers + [question.correct_answer]
    random.shuffle(choices)
    return choices
+
+def fifty_fifty(question):
+    """Remove 2 wrong answers, keep correct + 1 wrong"""
+    wrong = [o for o in question.options if o != question.correct_answer]
+    kept_wrong = random.sample(wrong, 1)
+    return [question.correct_answer] + kept_wrong
+
+def ask_audience(question):
+    """Return simulated audience percentages"""
+    choices = [c for c in question.options]
+    random.shuffle(choices)
+    # Simulate 70% bias toward correct answer
+    percentages = {choice: random.randint(5, 15) for choice in choices}
+    percentages[question.correct_answer] = 70 - sum(percentages.values())
+    return percentages
+
+def phone_friend(question):
+    """70% chance of correct answer hint, 30% wrong"""
+    if random.random() < 0.7:
+        return question.correct_answer
+    else:
+        wrong = [o for o in question.options if o != question.correct_answer]
+        return random.choice(wrong)
